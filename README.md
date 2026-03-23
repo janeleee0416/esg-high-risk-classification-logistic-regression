@@ -141,6 +141,43 @@ Energy and Basic Materials sectors show the highest ESG risk — aligning with t
 - Binary classification simplifies a multi-level risk structure
 
 ---
+## Step 12. ESG Risk & Stock Performance Analysis
+
+### Hypothesis
+> "Companies with high ESG risk show lower annual stock returns compared to low ESG risk companies."
+
+### Data
+- Stock return data fetched via **yfinance**
+- Period: 2 years (to align with ESG rating measurement timepoint)
+- Delisted companies excluded
+
+### Results
+
+| | High Risk | Low Risk |
+|--|--|--|
+| Companies | 51 | 336 |
+| Average 2Y Return | **27.19%** | **18.47%** |
+| Difference | +8.72%p | |
+| t-statistic | 1.0967 | |
+| p-value | 0.2734 | |
+| Statistically Significant | No (p > 0.05) | |
+
+### Key Finding
+The hypothesis is **rejected**. High ESG risk companies actually showed higher returns (27.19% vs 18.47%), but the difference is **not statistically significant** (p=0.2734).
+
+This aligns with growing academic debate around ESG investing — the assumption that "better ESG = better returns" is not clearly supported by this data.
+
+### Interpretation
+- ESG risk scores alone may not predict stock performance
+- Short-term market returns may be driven by factors beyond ESG (sector trends, macro environment)
+- Energy sector (highest ESG risk: 75%) benefited from commodity price increases, potentially inflating High Risk returns
+
+### Limitations
+- ESG rating timepoint not precisely known — 2Y return used as approximation
+- Sample imbalance: 51 High Risk vs 336 Low Risk companies
+- Single time period analysis — longitudinal study would be more robust
+
+![Stock Returns](stock_returns.png)
 
 ## Tech Stack
 
@@ -149,3 +186,4 @@ Energy and Basic Materials sectors show the highest ESG risk — aligning with t
 - SciPy (t-test)
 - Matplotlib
 - Jupyter Notebook
+- 
